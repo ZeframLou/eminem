@@ -6,7 +6,7 @@
     <div class="form-group">
       <label for="buyAmountInput">DAI Amount</label>
       <div class="input-group">
-        <input id="buyAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="buyAmount">
+        <input id="buyAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="buyAmount" name="buyAmountInput">
       </div>
       <button type="button" class="btn btn-link available-btn" (click)="max()">Available:
         {{daiBalance.toFormat()}}</button>

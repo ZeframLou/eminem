@@ -6,7 +6,7 @@
     <div class="form-group">
       <label for="sellAmountInput">Eminence Amount</label>
       <div class="input-group">
-        <input id="sellAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="sellAmount">
+        <input id="sellAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="sellAmount" name="sellAmountInput">
       </div>
       <button type="button" class="btn btn-link available-btn" (click)="max()">Available:
         {{eminenceBalance.toFormat()}}</button>
