@@ -3,6 +3,16 @@
     <img src="../../assets/images/eminem.jpg" />
   </div>
   <div class="row">
+    <button type="button" class="btn btn-outline-success wallet-btn" (click)="connectWallet()">
+      <div *ngIf="wallet.connected">
+        {{wallet.userAddress.substring(0, 14)}}
+      </div>
+      <div *ngIf="!wallet.connected">
+        Connect Wallet
+      </div>
+    </button>
+  </div>
+  <div class="row">
     <div class="card-deck">
       <app-buy></app-buy>
       <app-sell></app-sell>

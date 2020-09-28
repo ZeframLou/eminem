@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WalletService } from '../wallet.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(public wallet: WalletService) { }
 
   ngOnInit(): void {
   }
 
+  connectWallet() {
+    this.wallet.connect(() => {}, () => {}, false);
+  }
 }
