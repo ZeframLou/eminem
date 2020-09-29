@@ -1,8 +1,8 @@
 <div class="container mt-5 text-center justify-content-center">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mb-3">
     <img src="https://i.ytimg.com/vi/ZzaNkfQ5a64/maxresdefault.jpg" />
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mb-3">
     <button type="button" class="btn btn-outline-success wallet-btn" (click)="connectWallet()">
       <div *ngIf="wallet.connected">
         {{wallet.userAddress.substring(0, 14)}}
@@ -12,10 +12,13 @@
       </div>
     </button>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mb-3">
     <div class="card-deck justify-content-center">
       <app-buy></app-buy>
       <app-sell></app-sell>
     </div>
+  </div>
+  <div class="row justify-content-center mb-3">
+    <app-roi></app-roi>
   </div>
 </div>

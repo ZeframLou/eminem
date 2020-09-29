@@ -8,13 +8,15 @@ import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
 import { MainComponent } from './main/main.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RoiComponent } from './roi/roi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuyComponent,
     SellComponent,
-    MainComponent
+    MainComponent,
+    RoiComponent
   ],
   imports: [
     BrowserModule,

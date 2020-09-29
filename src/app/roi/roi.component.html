@@ -1,0 +1,65 @@
+<div class="card">
+  <div class="card-header">
+    <h1>ROI</h1>
+  </div>
+  <div class="card-body">
+    <ng-container *ngIf="loading">
+      Loading...
+    </ng-container>
+    <ng-container *ngIf="loaded">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <small class="float-left text-left">You have paid</small>
+            </div>
+            <div class="col">
+              <small class="float-right text-right">{{paidDAIAmount.toFormat(4)}} DAI</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <small class="float-left text-left">Your Eminence is worth</small>
+            </div>
+            <div class="col">
+              <small class="float-right text-right">{{eminenceSellValue.toFormat(4)}} DAI</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <small class="float-left text-left">You have sold Eminence for</small>
+            </div>
+            <div class="col">
+              <small class="float-right text-right">{{soldDAIAmount.toFormat(4)}} DAI</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <small class="float-left text-left">Your profit</small>
+            </div>
+            <div class="col">
+              <small class="float-right text-right">{{profitDAIAmount.toFormat(4)}} DAI</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <small class="float-left text-left">Your ROI</small>
+            </div>
+            <div class="col">
+              <small class="float-right text-right">{{roi.times(100).toFormat(4)}}%</small>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+    <button type="button" class="btn btn-block btn-outline" (click)="loadData()">Calculate your ROI</button>
+  </div>
+</div>
